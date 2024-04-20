@@ -1,4 +1,4 @@
-Employee Management System
+##Employee Management System
 This project is a simple employee management system built with React for the frontend and Node.js with Express for the backend. It allows users to add, edit, and delete employee records.
 
 Getting Started
