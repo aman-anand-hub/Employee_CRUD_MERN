@@ -16,7 +16,7 @@ function Home() {
 
   const fetchEmployees = async () => {
     try {
-      const response = await fetch('http://localhost:5000/user');
+      const response = await fetch('https://employee-crud-mern.onrender.com/user');
       const data = await response.json();
       setEmployees(data);
     } catch (error) {
@@ -31,7 +31,7 @@ function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = editId ? `http://localhost:5000/user/${editId}` : 'http://localhost:5000/user';
+      const url = editId ? `https://employee-crud-mern.onrender.com/user/${editId}` : 'https://employee-crud-mern.onrender.com/user';
       const method = editId ? 'PATCH' : 'POST';
 
       const response = await fetch(url, {
@@ -68,7 +68,7 @@ function Home() {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this record?')) {
       try {
-        const response = await fetch(`http://localhost:5000/user/${id}`, {
+        const response = await fetch(`https://employee-crud-mern.onrender.com/user/${id}`, {
           method: 'DELETE'
         });
         console.log('Employee deleted:', response);
